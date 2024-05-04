@@ -28,7 +28,7 @@ const MenuTab = () => {
         component={Profil}
         options={{
           tabBarIcon: ({size, color}) => (
-            <MaterialCommunityIcons name="cog" size={size} color={color} />
+            <MaterialCommunityIcons name="group" size={size} color={color} />
           ),
         }}
       />

@@ -11,14 +11,6 @@ const Data = [
   {id: 5, label: 'Snack-Snack'},
 ];
 
-const SalesData = [
-  {id: 1, item: 'Gula', price: 'Rp 10.000'},
-  {id: 2, item: 'Garam', price: 'Rp 5.000'},
-  {id: 3, item: 'Merica', price: 'Rp 20.000'},
-  {id: 4, item: 'Buku', price: 'Rp 15.000'},
-  {id: 5, item: 'Kopi', price: 'Rp 25.000'},
-];
-
 const Beranda = ({navigation}) => {
   return (
     <View style={styles.container}>
