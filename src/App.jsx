@@ -28,7 +28,7 @@ const MenuTab = () => {
         component={Profil}
         options={{
           tabBarIcon: ({size, color}) => (
-            <MaterialCommunityIcons name="group" size={size} color={color} />
+            <MaterialCommunityIcons name="account" size={size} color={color} />
           ),
         }}
       />
@@ -37,7 +37,11 @@ const MenuTab = () => {
         component={Tentang}
         options={{
           tabBarIcon: ({size, color}) => (
-            <MaterialCommunityIcons name="cog" size={size} color={color} />
+            <MaterialCommunityIcons
+              name="information-variant"
+              size={size}
+              color={color}
+            />
           ),
         }}
       />

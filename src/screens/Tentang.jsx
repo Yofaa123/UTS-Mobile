@@ -23,6 +23,20 @@ const Tentang = () => {
           menyediakan layanan yang cepat, mudah, dan aman bagi semua pengguna.
         </Text>
       </View>
+      <View style={styles.menu}>
+        <TouchableOpacity style={styles.menuItem}>
+          <Text style={styles.menuText}>Kebijakan Privasi</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.menuItem}>
+          <Text style={styles.menuText}>Syarat dan Ketentuan</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.menuItem}>
+          <Text style={styles.menuText}>Pusat Bantuan</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.menuItem}>
+          <Text style={styles.menuText}>Hubungi Kami</Text>
+        </TouchableOpacity>
+      </View>
       <TouchableOpacity
         onPress={() => navigation.navigate('Beranda')}
         style={styles.btn}>
@@ -63,6 +77,7 @@ const styles = StyleSheet.create({
   description: {
     fontSize: 16,
     textAlign: 'center',
+    color: 'black',
   },
   btn: {
     margin: 10,
@@ -76,5 +91,18 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     color: 'white',
+  },
+  menu: {
+    marginTop: 20,
+    paddingHorizontal: 20,
+  },
+  menuItem: {
+    paddingVertical: 15,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ccc',
+  },
+  menuText: {
+    fontSize: 18,
+    color: 'black',
   },
 });

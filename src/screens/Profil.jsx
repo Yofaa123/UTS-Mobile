@@ -23,6 +23,23 @@ const Profil = () => {
           <Text style={styles.editText}>Edit Profil</Text>
         </TouchableOpacity>
       </View>
+      <View style={styles.menu}>
+        <TouchableOpacity style={styles.menuItem}>
+          <Text style={styles.menuText}>Pengaturan</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.menuItem}>
+          <Text style={styles.menuText}>Privasi</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.menuItem}>
+          <Text style={styles.menuText}>Pengaturan Akun</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.menuItem}>
+          <Text style={styles.menuText}>Bantuan</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.menuItem}>
+          <Text style={styles.menuText}>Keluar</Text>
+        </TouchableOpacity>
+      </View>
       <TouchableOpacity
         onPress={() => navigation.navigate('Tentang')}
         style={styles.btn}>
@@ -63,10 +80,12 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 10,
+    color: 'black',
   },
   email: {
     fontSize: 18,
     marginBottom: 20,
+    color: 'black',
   },
   editButton: {
     backgroundColor: 'green',
@@ -91,5 +110,18 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     color: 'white',
+  },
+  menu: {
+    marginTop: 20,
+    paddingHorizontal: 20,
+  },
+  menuItem: {
+    paddingVertical: 15,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ccc',
+  },
+  menuText: {
+    fontSize: 18,
+    color: 'black',
   },
 });
