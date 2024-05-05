@@ -1,4 +1,10 @@
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  ScrollView,
+} from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {useNavigation} from '@react-navigation/native';
@@ -16,35 +22,40 @@ const Profil = () => {
         </TouchableOpacity>
         <Text style={styles.title}>Profil</Text>
       </View>
-      <View style={styles.content}>
-        <Text style={styles.name}>Mohammad Yofa Arifin</Text>
-        <Text style={styles.email}>mohammadyofaarifin@gmail.com</Text>
-        <TouchableOpacity style={styles.editButton}>
-          <Text style={styles.editText}>Edit Profil</Text>
+      <ScrollView>
+        <View style={styles.content}>
+          <View style={styles.profileIconContainer}>
+            <Icon name="user" size={100} color="green" />
+          </View>
+          <Text style={styles.name}>Mohammad Yofa Arifin</Text>
+          <Text style={styles.email}>mohammadyofaarifin@gmail.com</Text>
+          <TouchableOpacity style={styles.editButton}>
+            <Text style={styles.editText}>Edit Profil</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.menu}>
+          <TouchableOpacity style={styles.menuItem}>
+            <Text style={styles.menuText}>Pengaturan</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.menuItem}>
+            <Text style={styles.menuText}>Privasi</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.menuItem}>
+            <Text style={styles.menuText}>Pengaturan Akun</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.menuItem}>
+            <Text style={styles.menuText}>Bantuan</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.menuItem}>
+            <Text style={styles.menuText}>Keluar</Text>
+          </TouchableOpacity>
+        </View>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Tentang')}
+          style={styles.btn}>
+          <Text style={styles.ab}>Ke Tentang</Text>
         </TouchableOpacity>
-      </View>
-      <View style={styles.menu}>
-        <TouchableOpacity style={styles.menuItem}>
-          <Text style={styles.menuText}>Pengaturan</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.menuItem}>
-          <Text style={styles.menuText}>Privasi</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.menuItem}>
-          <Text style={styles.menuText}>Pengaturan Akun</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.menuItem}>
-          <Text style={styles.menuText}>Bantuan</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.menuItem}>
-          <Text style={styles.menuText}>Keluar</Text>
-        </TouchableOpacity>
-      </View>
-      <TouchableOpacity
-        onPress={() => navigation.navigate('Tentang')}
-        style={styles.btn}>
-        <Text style={styles.ab}>Ke Tentang</Text>
-      </TouchableOpacity>
+      </ScrollView>
     </View>
   );
 };
@@ -72,9 +83,17 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   content: {
-    flex: 1,
+    alignItems: 'center',
+    paddingVertical: 20,
+  },
+  profileIconContainer: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    backgroundColor: '#ccc',
     justifyContent: 'center',
     alignItems: 'center',
+    marginBottom: 20,
   },
   name: {
     fontSize: 24,
@@ -112,7 +131,6 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   menu: {
-    marginTop: 20,
     paddingHorizontal: 20,
   },
   menuItem: {

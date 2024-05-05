@@ -36,6 +36,16 @@ const Tentang = () => {
         <TouchableOpacity style={styles.menuItem}>
           <Text style={styles.menuText}>Hubungi Kami</Text>
         </TouchableOpacity>
+        {/* Menu-menu baru */}
+        <TouchableOpacity style={styles.menuItem}>
+          <Text style={styles.menuText}>Pengaturan Akun</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.menuItem}>
+          <Text style={styles.menuText}>Notifikasi</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.menuItem}>
+          <Text style={styles.menuText}>Tentang Aplikasi</Text>
+        </TouchableOpacity>
       </View>
       <TouchableOpacity
         onPress={() => navigation.navigate('Beranda')}
