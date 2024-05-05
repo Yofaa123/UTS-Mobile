@@ -173,6 +173,9 @@ const Beranda = ({navigation}) => {
               <Image source={item.icon} style={styles.iconImage} />
               <Text>{item.label}</Text>
               <Text>{item.harga}</Text>
+              <TouchableOpacity style={styles.orderButton}>
+                <Text style={styles.orderButtonText}>Pesan</Text>
+              </TouchableOpacity>
             </TouchableOpacity>
           )}
           keyExtractor={item => item.id.toString()}
@@ -286,5 +289,15 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     color: 'white',
+  },
+  orderButton: {
+    marginTop: 5,
+    padding: 5,
+    backgroundColor: 'green', // Mengubah warna menjadi hijau
+    borderRadius: 5,
+  },
+  orderButtonText: {
+    color: 'white',
+    fontWeight: 'bold',
   },
 });
